@@ -33,3 +33,9 @@ Reproduzir fielmente o layout proposto no Figma, garantindo responsividade e int
 - **Swiper.js** (carrossel)
 
 ---
+
+## Site Hospedado
+
+Site hospedado no vercel:
+
+link: https://avanti-shop-lemon.vercel.app/
