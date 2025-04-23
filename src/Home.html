@@ -11,246 +11,1562 @@
 </head>
 
 <body class="font-[Nunito Sans]">
-    <header>
-        <div class="bg-[#005CFF] py-1 text-center text-sm">
+    <header class="">
+        <div class="
+            bg-[#005CFF] py-1 text-center text-sm
+            max-lg:px-6
+            ">
             <span class="text-white font-semibold">Ganhe
                 <span class="bg-[#6220C1] text-white px-1">R$10,00</span>
                 de desconto no seu primeiro pedido. Utilize o cupom
                 <span class="font-light">DESCONTO10</span>
             </span>
         </div>
-        <div class="
-            flex justify-between items-center
-            lg:px-[330px] lg:py-6 lg:grid-cols-5 lg:gap-16
+        <nav class="
+            relative
+            px-4 py-5
+            lg:px-[330px] lg:py-6 lg:flex lg:flex-col 
             ">
-            <div>
-                <img src="./assets/Logo.svg" alt="">
-            </div>
-            <div class="
-                lg:pr-[210px]
+            <ul class="
+                grid grid-cols-3 items-center gap-3
+                lg:flex lg:justify-between
+                
                 ">
-                <div class="relative">
-                    <input type="text" class="px-8 py-2 w-[594px]" placeholder="Digite aqui o que você procura">
-                    <button class="absolute right-8 bottom-2">
-                        <img src="assets/Search.svg" alt="">
-                    </button>
-                </div>
-
-            </div>
-            <div class="flex items-center gap-6">
-                <button class="flex items-center gap-2 w-full">
-                    <img src="assets/Icon-Login.svg" alt="">
-                    <div class="flex flex-col text-start text-sm">
-                        <span>
-                            Olá,
-                            <br>Nome cliente!
-                        </span>
+                <button id="hamburger" 
+                    class="
+                    max-lg:order-1 
+                    w-[25px] h-[25px] bg-[url(./assets/Hamburger.svg)] bg-cover bg-no-repeat
+                    lg:hidden">
+                </button>
+                <li class="
+                    max-lg:order-2 
+                    ">
+                    <a href="#">
+                        <img src="./assets/Logo.svg" alt="Logo do Avanti">
+                    </a>
+                </li>
+                <li class="
+                    max-lg:order-4 
+                    col-span-3 relative z-50
+                    lg:pr-[210px] lg:flex lg:flex-col lg:gap-1
+                    ">
+                    <div class="relative">
+                        <input 
+                            id="campoBusca"
+                            type="text" 
+                            class="
+                                w-full py-2 px-5
+                                lg:px-8 lg:w-[594px]" 
+                            placeholder="Digite aqui o que você procura">
+                        <button 
+                            id="botaoBusca"
+                            class="
+                                absolute right-5 top-2.5
+                                lg:right-8 lg:bottom-2
+                            ">
+                            <img src="assets/Search.svg" alt="Icone de Busca">
+                        </button>
                     </div>
-                </button>
-                <button>
-                    <img src="assets/Carinho.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <nav class="flex items-center w-full lg:px-[330px] pb-6 lg:gap-[45px] lg:text-sm">
-            <div class="relative group">
-                <!-- Botão principal -->
-                <button class="flex items-center font-bold lg:gap-2 hover:text-[#005CFF] transition-colors group">
-                    <svg id="hamburger" width="14" height="12" viewBox="0 0 14 12" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <line x1="1" y1="6" x2="13" y2="6" stroke="black" stroke-width="2" stroke-linecap="round"
-                            class="group-hover:stroke-blue-500 transition-colors duration-300" />
-                        <line x1="1" y1="11" x2="13" y2="11" stroke="black" stroke-width="2" stroke-linecap="round"
-                            class="group-hover:stroke-blue-500 transition-colors duration-300" />
-                        <line x1="1" y1="1" x2="13" y2="1" stroke="black" stroke-width="2" stroke-linecap="round"
-                            class="group-hover:stroke-blue-500 transition-colors duration-300" />
-                    </svg>
-                    <p>Todas as Categorias</p>
-                </button>
-
-                <!-- Dropdown principal -->
-                <div
-                    class="absolute left-0 top-full shadow-lg rounded-lg pt-9 z-50 hidden group-hover:flex group-focus-within:flex">
-                    <div class="w-[234px] pb-3 pr-3 bg-white items-center rounded-lg">
-                        <ul class="w-full flex flex-col gap-1 text-sm">
-
-                            <!-- Item com submenu lateral -->
-                            <li
-                                class="relative group">
-                                <div class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                    <span>Departamento</span>
-                                    <span class="text-xl">›</span>
-                                </div>
-
-                                <!-- Submenu lateral -->
-                                <div
-                                    class="absolute left-full top-0 w-[1027px] h-[329px] hidden group-hover:flex bg-white rounded-lg">
-                                    <div class="px-6 py-2 flex justify-between gap-[260px] text-sm h-full">
-                                        <div class="grid grid-cols-3 gap-[127px]">
-                                            <!-- Coluna 1 -->
-                                            <div class="flex flex-col gap-3">
-                                                <h3 class="text-[#005CFF] font-bold">Categoria</h3>
-                                                <ul class="text-[#4B4B4B] flex flex-col gap-3">
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                </ul>
-                                            </div>
-                                            <!-- Coluna 2 -->
-                                            <div class="flex flex-col gap-3">
-                                                <h3 class="text-[#005CFF] font-bold">Categoria</h3>
-                                                <ul class="text-[#4B4B4B] flex flex-col gap-3">
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                </ul>
-                                            </div>
-                                            <div class="flex flex-col gap-3">
-                                                <h3 class="text-[#005CFF] font-bold">Categoria</h3>
-                                                <ul class="text-[#4B4B4B] flex flex-col gap-3">
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                    <li class="cursor-pointer hover:text-[#005CFF] transition-colors">Categoria</li>
-                                                </ul>
+                    <p 
+                        id="mensagemBusca" 
+                        class=" text-sm text-gray-600">
+                    </p>
+                </li>
+                <li class="
+                    max-lg:order-3 
+                    flex justify-end 
+                    lg:justify-between lg:items-center lg:gap-6">
+                    <button class="
+                        max-lg:hidden
+                        flex items-center gap-2 w-full">
+                        <img 
+                            class="
+                                cursor-pointer"
+                            src="assets/Icon-Login.svg" 
+                            alt="Icone de Login">
+                        <div class="flex flex-col text-start text-sm">
+                            <span>
+                                Olá,
+                                <br>Nome cliente!
+                            </span>
+                        </div>
+                    </button>
+                    <button class="
+                        relative
+                        hover:cursor-pointer
+                        ">
+                        <img 
+                            class="w-[30px] h-[30px]"
+                            src="assets/Carinho.svg" alt="Carrinho de Compra">
+                        <span id="carrinho" 
+                            class="
+                            flex justify-center items-center bg-[#005cff] absolute top- rounded-full text-white text-xs
+                            w-[21px] h-[21px] -top-1 left-4
+                            ">2</span>
+                    </button>
+                </li>
+            </ul>
+            <nav id="Navegacao"
+                class="
+                hidden
+                max-lg:absolute max-lg:top-full max-lg:left-0 
+                bg-white w-full text-sm z-20
+                lg:grid lg:py-5
+                ">
+                <ul class="
+                    flex flex-col gap-3 bg-white relative
+                    lg:flex-row lg:justify-between
+                    ">
+                    <li id="Categorias"
+                        class="
+                            relative group
+                            max-lg:px-4
+                            ">
+                        <button class="
+                            
+                            flex items-center gap-2
+                            hover:text-[#005CFF] transition-colors group
+                            ">
+                            <svg class="max-lg:hidden" id="hamburge" width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1" y1="6" x2="13" y2="6" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        class="group-hover:stroke-blue-500 transition-colors duration-300" />
+                                    <line x1="1" y1="11" x2="13" y2="11" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        class="group-hover:stroke-blue-500 transition-colors duration-300" />
+                                    <line x1="1" y1="1" x2="13" y2="1" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        class="group-hover:stroke-blue-500 transition-colors duration-300" />
+                            </svg>
+                            <span class="font-bold group-hover:text-[#005CFF]">Todas as Categorias</span>
+                        </button>
+                        <ul
+                            id="MenuCategorias"
+                            class="
+                                hidden
+                                absolute z-40 left-full top-0
+                                lg:left-0 lg:top-full bg-white rounded-l-lg lg:flex flex-col gap-2 text-sm
+                                lg:w-[234px] lg:h-[335px] lg:gap-1 lg:pt-2
+                                ">
+                            <li id="Departamento1"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep1">Departamento</span>
+                                    <span id="dep1" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento1"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- Coluna 3: imagem -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento2"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep2">Departamento</span>
+                                    <span id="dep2" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento2"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
                                         <div class="relative">
-                                                <img src="assets/Product.png"
-                                                    class="rounded-lg w-full h-full" />
-                                                <div
-                                                    class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
-                                                    <div class="flex flex-col w-[126px]">
-                                                        <p class="text-2xl font-extralight">Confira os Produtos</p>
-                                                        <p class="font-bold text-2xl">Que acabaram de chegar</p>
-                                                    </div>
-                                                    <div>
-                                                        <button
-                                                            class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
-                                                            TODOS
-                                                        </button>
-                                                    </div>
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
                                                 </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento3"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep3">Departamento</span>
+                                    <span id="dep3" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento3"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento4"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep4">Departamento</span>
+                                    <span id="dep4" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento4"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento5"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep5">Departamento</span>
+                                    <span id="dep5" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento5"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento6"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep6">Departamento</span>
+                                    <span id="dep6" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento6"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento7"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep7">Departamento</span>
+                                    <span id="dep7" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento7"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento8"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep8">Departamento</span>
+                                    <span id="dep8" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento8"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento9"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep9">Departamento</span>
+                                    <span id="dep9" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento9"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="Departamento10"
+                                class="
+                                    max-lg:px-4
+                                    lg:flex flex-col w-full
+                                    lg:px-4
+                                    ">
+                                <button
+                                    type="button"
+                                    class="
+                                    flex w-full text-left 
+                                    lg:justify-between lg:items-center hover:text-[#005CFF] cursor-pointer">
+                                    <span id="dep10">Departamento</span>
+                                    <span id="dep10" class="text-xl max-lg:hidden">›</span>
+                                </button>
+                                <ul id="MenuDepartamento10"
+                                    class="
+                                        hidden max-lg:pb-6 absolute top-0 left-full bg-white rounded-r-lg 
+                                        lg:flex flex-col max-lg:gap-2 px-4
+                                        lg:flex-row lg:px-8 lg:pt-3 lg:w-[1027px] lg:h-[335px] justify-between">
+                                    <li class="
+                                            flex flex-col gap-3
+                                            lg:grid lg:grid-cols-3 lg:gap-[129px]
+                                            ">
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                        <ul class="flex flex-col gap-3 text-sm">
+                                            <li><strong class="text-[#005CFF]">Categoria</strong></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                            <li><a href="#" class="text-[#656565] hover:text-[#005CFF] transition-colors">Categoria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="max-lg:hidden flex justify-end pb-5 pt-2 px-6">
+                                        <div class="relative">
+                                            <img src="assets/Product.png" class="rounded-lg w-full h-full" alt="Produtos em destaque" />
+                                            <div class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                                <div class="flex flex-col w-[126px]">
+                                                    <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                                    <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                                </div>
+                                                <div>
+                                                    <button class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">
+                                                    VER TODOS
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="Dep-1"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu1"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-
-                            <!-- Outros itens sem submenu (copie o acima se quiser mais com submenu) -->
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
-                            <li class="flex justify-between items-center hover:text-[#005CFF] cursor-pointer">
-                                <span>Departamento</span>
-                                <span class="text-xl">›</span>
-                            </li>
+                            </div>
                         </ul>
-                    </div>
-                </div>
-            </div>
+                    </li>
 
-            <!-- Outros botões do menu -->
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
-            <button class="text-[#707070]">
-                <p>Departamento</p>
-            </button>
+                    <li id="Dep-2"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu2"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li id="Dep-3"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu3"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    
+                    <li id="Dep-4"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu4"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li id="Dep-5"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu5"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li id="Dep-6"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu6"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <li id="Dep-7"
+                        class="
+                            max-lg:px-4
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu7"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    
+                    <li id="Dep-8"
+                        class="
+                            max-lg:px-4 max-lg:pb-2
+                            flex flex-col
+                            lg:flex group text-[#707070]
+                            
+                            ">
+                        <button class="
+                            max-lg:text-start
+                            hover:text-[#005CFF] transition-colors group">
+                            <span class="group-hover:text-[#005CFF]">Departamento</span>
+                        </button>
+                        <ul id="DepMenu8"
+                            class="
+                                hidden
+                                absolute z-40 w-[250px] left-full top-0 bg-white p-4 lg:flex flex-col justify-between rounded-lg
+                                lg:w-[1261px] lg:h-[335px] lg:flex-row lg:p-5
+                                lg:top-5 lg:left-0
+                                ">
+                            <div class="
+                                flex flex-col gap-4
+                                ">
+                                <span class="text-[16px] text-black font-bold">Departamento</span>
+                                <ul class="
+                                    grid grid-cols-2 gap-10
+                                    lg:flex lg:flex-row lg:justify-between lg:gap-[126px]">
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                    <li class="
+                                        text-[#707070] text-sm flex flex-col gap-3
+                                        ">
+                                        <a href="#" class="text-[#005CFF] font-semibold">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                        <a href="#" class="hover:text-[#005CFF] transition-colors">Categoria</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="
+                                max-lg:hidden
+                                pb-5 px-6">
+                                <div class="relative">
+                                    <img src="assets/Product.png" class="rounded-lg w-full h-full" />
+                                    <div
+                                        class="absolute inset-0 flex flex-col justify-start text-white bg-black/40 rounded-lg pt-[43px] px-7">
+                                        <div class="flex flex-col w-[126px]">
+                                            <p class="text-2xl font-extralight">Confira os Produtos</p>
+                                            <p class="font-bold text-2xl">Que acabaram de chegar</p>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="mt-4 border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-black transition">VER
+                                                TODOS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </nav>
     </header>
 
     <main>
         <section id="SuperSale" class="
-            flex items-center
-            lg:px-[330px] lg:pb-24
+            max-lg:h-[306px] bg-[#E7E7EA]
+            relative grid grid-cols-2 items-center
+            lg:flex lg:px-[330px] lg:mb-12 lg:gap-2
             ">
-            <div>
-                <img src="assets/Rectangle 10.png" alt="">
+            <div class="lg:hidden"></div>
+            <div class="
+                max-lg:absolute max-lg:-left-5 max-lg:top-0 z-10
+                max-lg:bg-position-[top_right_-4rem] w-[225px] h-[306px]
+                bg-[url(./assets/Rectangle-10.png)] bg-cover bg-no-repeat
+                lg:w-[685px] lg:h-[510px] lg:bg-position-[center_top_0rem]
+                ">
             </div>
-            <div class="flex flex-col text-center">
-                <div class="flex justify-center text-[100px]">
+            <div class="
+                flex flex-col text-center">
+                <div class="
+                    flex flex-col text-[40px] items-center
+                    lg:flex-row lg:text-[100px]">
                     <h3 class="font-bold">SUPER</h3>
                     <h3 class="font-extralight">SALE</h3>
                 </div>
                 <div class="text-[#005CFF]">
-                    <h3 class="text-2xl font-semibold tracking-[0.25em]">ITENS SELECIONADOS COM ATÉ</h3>
-                    <h4 class="text-6xl font-bold">50%OFF</h4>
+                    <h3 class="
+                        font-semibold text-xs tracking-[0.05em]
+                        lg:text-2xl lg:tracking-[0.25em]
+                        ">ITENS SELECIONADOS COM ATÉ</h3>
+                    <h4 class="
+                        font-bold text-[32px]
+                        lg:text-6xl
+                        ">50%OFF</h4>
                 </div>
             </div>
         </section>
 
-        <section id="carrosselShop1" class="px-[330px]">
+        <section id="carrosselShop1" 
+                class="
+                px-4 pb-7 pt-14 flex flex-col gap-4
+                lg:px-[330px]
+                ">
             <div class="flex justify-between items-center">
                 <h2 class="text-xl font-semibold">Lançamentos</h2>
-                <a href="#" class="text-sm font-semibold text-gray-500 hover:underline">Ver mais</a>
+                <a href="#" 
+                    class="
+                        max-lg:underline
+                        text-sm font-semibold text-gray-500 hover:underline">Ver mais</a>
             </div>
 
-            <div class="relative">
+            <div class="relative flex justify-between gap-5">
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper px-5 py-6">
+                    <div class="
+                        swiper-wrapper flex justify-between py-6
+                        px-4
+                        ">
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -275,7 +1591,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -300,7 +1618,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -325,7 +1645,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -351,7 +1673,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -377,7 +1701,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -403,7 +1729,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -438,26 +1766,32 @@
         </section>
 
         <section id="template-1" class="
-            grid
-            lg:px-[370px] lg:pt-24 lg:pb-14 lg:grid-cols-2 lg:gap-9 lg:items-center
+            flex flex-col py-7
+            lg:grid lg:px-[370px] lg:py-12 lg:grid-cols-2 lg:gap-9 lg:items-center
             ">
             <div class="
                 ">
-                <img src="assets/ImageTemplate1.png" alt="">
+                <img 
+                    class="
+                        max-lg:mx-auto
+                        "
+                    src="assets/ImageTemplate1.png" 
+                    alt="Imagem de Caneca Avanti">
             </div>
             <div class="
-                flex
-                lg:flex-col lg:gap-[22px]
+                max-lg:px-6 max-lg:py-9
+                flex flex-col gap-4
+                lg:gap-[22px]
                 ">
-                <h4 class="text-3xl font-bold">LOREM IPSUM</h4>
-                <p class="text-lg">
+                <h4 class="text-2xl lg:text-3xl font-bold">LOREM IPSUM</h4>
+                <p class="text-sm lg:text-lg">
                     Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut
                     eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia
                     pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia.
                     Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a
                     libero commodo egestas efficitur id augue.
                 </p>
-                <p class="text-lg">
+                <p class="text-sm lg:text-lg">
                     Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut
                     eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia
                     pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia.
@@ -468,76 +1802,89 @@
         </section>
 
         <section id="template-2" class="
-            bg-[#DEDEDE]
-            lg:px-[370px] lg:py-10
+            bg-[#DEDEDE] px-5 py-7 my-7
+            lg:px-[370px] lg:py-12
             ">
             <div class="
-                grid
+                grid gap-5
                 lg:grid-cols-2 lg:gap-14 lg:items-center
                 ">
                 <div class="
-                    text-[#4F4F4F] flex flex-col
+                    max-xl:order-2
+                    text-[#4F4F4F] flex flex-col gap-5
                     lg:gap-[50px]
                     ">
-                    <h4 class="text-3xl font-bold text-center">LOREM IPSUM</h4>
+                    <h4 class="
+                        text-[20px] font-bold text-center
+                        lg:text-3xl
+                        ">LOREM IPSUM</h4>
                     <div class="
-                        flex items-center
-                        lg:gap-5
+                        flex items-center gap-5
                         ">
-                        <img src="assets/Icon-Local.svg" alt="">
-                        <p class="lg:text-xl">
+                        <img 
+                            class="max-lg:w-[70px] max-lg:h-[70px]" 
+                            src="assets/Icon-Local.svg" 
+                            alt="Icone de Topico">
+                        <p class="text-[13px] lg:text-xl">
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                         </p>
                     </div>
                     <div class="
-                        flex items-center
-                        lg:gap-5
+                        flex items-center gap-5
                         ">
-                        <img src="assets/Icon-Local.svg" alt="">
-                        <p class="lg:text-xl">
+                        <img 
+                            class="max-lg:w-[70px] max-lg:h-[70px]"
+                            src="assets/Icon-Local.svg" 
+                            alt="Icone de Topico">
+                        <p class="text-[13px] lg:text-xl">
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                         </p>
                     </div>
                     <div class="
-                        flex items-center
-                        lg:gap-5
+                        flex items-center gap-5
                         ">
-                        <img src="assets/Icon-Local.svg" alt="">
-                        <p class="lg:text-xl">
+                        <img 
+                            class="max-lg:w-[70px] max-lg:h-[70px]" 
+                            src="assets/Icon-Local.svg" 
+                            alt="Icone de Topico">
+                        <p class="text-[13px] lg:text-xl">
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <img src="assets/ImageTemplate2.png" alt="">
+                <div class="max-lg:order-1 max-lg:mx-auto">
+                    <img src="assets/ImageTemplate2.png" alt="Imagem de Caneca Avanti">
                 </div>
             </div>
         </section>
 
         <section id="template-3" class="
-        grid
-        lg:px-[370px] lg:pt-24 lg:pb-14 lg:grid-cols-2 lg:gap-9 lg:items-center
+        grid gap-9 py-7
+        lg:px-[370px] lg:py-12 lg:pb-14 lg:grid-cols-2 lg:items-center
         ">
             <div class="
             ">
-                <img src="assets/ImageTemplate1.png" alt="">
+                <img
+                    class="max-lg:mx-auto"
+                    src="assets/ImageTemplate1.png" alt="Imagem de Caneca Avanti">
             </div>
             <div class="
-            flex
-            lg:flex-col lg:gap-[22px]
+                max-lg:px-6
+                flex flex-col gap-4
+                lg:gap-[22px]
             ">
-                <h4 class="text-3xl font-bold">LOREM IPSUM</h4>
-                <p class="text-lg">
+                <h4 class="text-2xl lg:text-3xl font-bold">LOREM IPSUM</h4>
+                <p class="text-sm lg:text-lg">
                     Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut
                     eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia
                     pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia.
                     Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a
                     libero commodo egestas efficitur id augue.
                 </p>
-                <p class="text-lg">
+                <p class="text-sm lg:text-lg">
                     Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut
                     eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia
                     pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia.
@@ -547,18 +1894,30 @@
             </div>
         </section>
 
-        <section id="carrosselShop2" class="px-[330px] pb-16">
+        <section id="carrosselShop2" 
+                class="
+                px-4 py-7 flex flex-col gap-4
+                lg:px-[330px]
+                ">
             <div class="flex justify-between items-center">
                 <h2 class="text-xl font-semibold">Lançamentos</h2>
-                <a href="#" class="text-sm font-semibold text-gray-500 hover:underline">Ver mais</a>
+                <a href="#" 
+                    class="
+                        max-lg:underline
+                        text-sm font-semibold text-gray-500 hover:underline">Ver mais</a>
             </div>
 
-            <div class="relative">
+            <div class="relative flex justify-between gap-5">
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper px-5 py-6">
+                    <div class="
+                        swiper-wrapper flex justify-between py-6
+                        px-4
+                        ">
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -583,7 +1942,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -608,7 +1969,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -633,7 +1996,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -659,7 +2024,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -685,7 +2052,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -711,7 +2080,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="relative rounded-xl p-2 shadow-md flex flex-col gap-1 w-[238px]">
+                            <div class="
+                                w-[174px] relative rounded-xl p-2 shadow-md flex flex-col gap-1 
+                                lg:w-[238px]">
                                 <span
                                     class="bg-[#00264E] text-white text-[10px] font-bold px-2 py-1 rounded absolute top-2 left-2">NOVO</span>
                                 <img src="assets/ProductImage.png" alt="Produto" class="mb-4">
@@ -745,36 +2116,60 @@
             </div>
         </section>
 
-        <section id="backgroundImage" class="
-            bg-[url('./assets/imageTemplate3.png')] bg-cover bg-center w-full relative lg:h-[660px] flex items-center justify-center
-            lg:py-16
-            ">
-            <div class="bg-[#005CFF] w-full text-center py-12 shadow-lg">
-                <span class="text-2xl lg:text-3xl text-white font-light">
-                    Entre em contato conosco e verifique a disponibilidade para sua região!
-                </span>
+        <section id="backgroundImage"
+            class="py-12">
+            <div 
+                class="
+                    max-lg:h-[449px] max-lg:w-full max-lg:bg-position-[center_bottom_0rem]
+                    bg-[url('./assets/imageTemplate3Mobile.png')]
+                    lg:bg-[url('./assets/imageTemplate3.png')] bg-cover bg-no-repeat w-full relative lg:h-[660px] flex items-center justify-center
+                ">
+                <div class="
+                    bg-[#005CFF] w-full text-center py-4 shadow-lg
+                    lg:py-12
+                    ">
+                    <span class="
+                        max-lg:px-3
+                        text-lg text-white 
+                        lg:text-3xl">
+                        Entre em contato conosco e verifique a disponibilidade para sua região!
+                    </span>
+                </div>
             </div>
         </section>
+
         <section id="newsletter" class="
-            flex flex-col
-            lg:px-[330px] lg:py-16 lg:gap-20
+            flex flex-col px-3.5 py-10 gap-4
+            lg:px-[330px] lg:py-7 lg:gap-6
             ">
-            <h4 class="text-[#000000] text-xl text-center font-bold">Cadastre-se na nossa <span
+            <h4 class="
+                text-lg
+                text-[#000000] text-center font-bold
+                lg:text-xl
+                ">Cadastre-se na nossa <span
                     class="text-[#005CFF]">newsletter</span></h4>
             <form class="
-                flex items-center justify-center
-                lg:gap-6
+                bg-[#F5F5F5] px-4 py-9 flex flex-col justify-center gap-4 rounded-lg
+                lg:bg-[#DEDEDE] lg:py-16 lg:flex-row lg:gap-6 items-center
                 ">
                 <input class="
-                    w-[280px] rounded-lg px-6 py-4
+                    max-lg:w-full
+                    bg-white w-[280px] rounded-lg px-6 py-4
                     focus:border-[#707070]
                     " type="text" placeholder="Digite seu nome">
-                <input class="w-[280px] rounded-lg px-6 py-4" type="email" placeholder="Digite seu e-mail">
-                <div class="text-[#707070]">
+                <input class="
+                    max-lg:w-full
+                    bg-white w-[280px] rounded-lg px-6 py-4
+                    " type="email" placeholder="Digite seu e-mail">
+                <div class="
+                    text-[#707070] text-xs
+                    lg:text-sm
+                    ">
                     <input type="checkbox" name="acordo" id="acordo">
                     <label for="acordo">Estou de acordo com a Política de Privacidade</label>
                 </div>
-                <button class="
+                <button class=" 
+                    max-lg:w-full
                     px-7 py-4 bg-[#005CFF] text-white font-semibold rounded-lg
                     hover:opacity-95 transition-colors
                     ">
@@ -782,153 +2177,195 @@
                 </button>
             </form>
         </section>
+
+        <footer class="
+            flex flex-col
+            lg:py-8 lg:gap-16
+            ">
+            <ul class="
+                bg-[#F5F5F5] flex flex-col gap-14 py-10
+                lg:px-[360px] lg:py-16 lg:gap-20
+                ">
+                <ul class="
+                    flex flex-col gap-8
+                    lg:flex-row lg:justify-between
+                    ">
+                    <li class="
+                        max-lg:justify-center max-lg:items-center
+                        flex flex-col gap-10
+                        ">
+                        <button>
+                            <img src="assets/Logo.svg" alt="Logo da Avanti">
+                        </button>
+                        <div class="flex items-center gap-10">
+                            <button class="cursor-pointer">
+                                <img src="assets/Instagram.svg" alt="Icone do Instagram">
+                            </button>
+                            <button class="cursor-pointer">
+                                <img src="assets/facebook.svg" alt="Icone do Instagram">
+                            </button>
+                            <button class="cursor-pointer">
+                                <img src="assets/youtube.svg" alt="Icone do Instagram">
+                            </button class="cursor-pointer">
+                            <button class="cursor-pointer">
+                                <img src="assets/tiktok.svg" alt="Icone do Instagram">
+                            </button>
+                        </div>
+                    </li>
+                    <ul class="
+                        max-lg:outline-1 max-lg:outline-offset-2 max-lg:outline-dotted
+                        max-lg:px-4 max-xl:py-3
+                        flex flex-col gap-3
+                        lg:grid lg:grid-cols-3 lg:gap-[110px]
+                        ">
+                        <li class="
+                            flex flex-col text-sm
+                            lg:gap-4
+                            ">
+                            <button id="instituicao"
+                                class="
+                                    max-lg:p-4
+                                    flex justify-between items-center
+                                    "
+                                >
+                                <h4 class="text-black font-bold">Institucional</h4>
+                                <span class="
+                                    w-[18px] h-[12px]
+                                    bg-[url('./assets/iconmonstr-arrow.svg')] bg-no-repeat bg-cover
+                                    lg:hidden
+                                    "></span>
+                            </button>
+                            <div id="menuInstitucional" 
+                                class="
+                                hidden
+                                max-lg:px-4
+                                lg:flex text-[#707070] flex-col gap-2
+                                ">
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Sobre Nós</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Nossas Lojas</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Privacidade e Segurança</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Termos e Condições</h5>
+                            </div>
+                        </li>
+                        <li class="
+                            flex flex-col text-sm
+                            lg:gap-4
+                            ">
+                            <button 
+                                id="Central"
+                                class="
+                                    max-lg:p-4
+                                    flex justify-between items-center
+                                    ">
+                                <h4 class="text-black font-bold">Central de ajuda</h4>
+                                <span class="
+                                    w-[18px] h-[12px]
+                                    bg-[url('./assets/iconmonstr-arrow.svg')] bg-no-repeat bg-cover
+                                    lg:hidden
+                                    "></span>
+                            </button>
+                            <div id="menuCentral"  
+                                class="
+                                hidden
+                                max-lg:px-4
+                                lg:flex text-[#707070] flex-col gap-2
+                                ">
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Fale Conosco</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Frete e Entrega</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Troca e Devoluçõoes</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">Formas de Pagamento</h5>
+                                <h5 class="hover:text-[#101010] transition-colors cursor-pointer">FAQ</h5>
+                            </div>
+                        </li>
+                        <li class="
+                            flex flex-col text-sm
+                            lg:gap-4
+                            ">
+                            <button id="Atendimento" 
+                                class="
+                                    max-lg:p-4
+                                    flex justify-between items-center
+                                    ">
+                                <h4 class="text-black font-bold">Atendimento</h4>
+                                <span class="
+                                    w-[18px] h-[12px]
+                                    bg-[url('./assets/iconmonstr-arrow.svg')] bg-no-repeat bg-cover
+                                    lg:hidden
+                                    "></span>
+                            </button>
+                            <div id="menuAtendimento" 
+                                class="
+                                hidden
+                                max-lg:px-4
+                                lg:flex text-[#000] flex-col gap-2
+                                ">
+                                <div class="flex gap-1">
+                                    <h5 class="font-semibold">Telefone:</h5>
+                                    <span class="text-[#707070]">(00) 1234-5678</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <h5 class="font-semibold">E-mail:</h5>
+                                    <span class="text-[#707070]">exemplo@exemplo.com.br</span>
+                                </div>
+                                <div class="
+                                    flex flex-col gap-2 text-[12px]">
+                                    <h5 class="font-semibold">Horario de atendimento:</h5>
+                                    <span class="text-[#707070]">Segunda a Sábado: 07h00 ás 23h00</span>
+                                    <span class="text-[#707070]">Domingos e Feriados: 07h00 ás 21h00</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </ul>
+                <li class="
+                    items-center flex flex-col gap-5
+                    lg:flex-row lg:justify-center lg:gap-8 
+                    ">
+                    <div class="flex justify-center items-center gap-8">
+                        <img src="assets/amex.svg" alt="logo Amex">
+                        <img src="assets/União.svg" alt="Logo União">
+                        <img src="assets/visa.svg" alt="Logo da Visa">
+                        <img src="assets/hipercard.svg" alt="Logo da Hiper card">
+                        <img src="assets/elo.svg" alt="Logo da Elo">
+                    </div>
+                    <div class="flex justify-center items-center gap-8">
+                        <img src="assets/b.svg" alt="Logo da">
+                        <img src="assets/paypal.svg" alt="Logo do Paypal">
+                        <img src="assets/pix.svg" alt="Logo do Pix">
+                        <img src="assets/boleto.svg" alt="Boleto">
+                    </div>
+                </li>
+            </ul>
+            <div class="
+                max-lg:py-10 max-lg:px-4
+                lg:px-[360px] flex flex-col gap-10
+                ">
+                <span class="text-center text-[12px] text-[#303030]">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+                    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+                    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+                    dolore te feugait nulla facilisi.
+                </span>
+                <div class="flex justify-center items-center gap-12">
+                    <div class="flex gap-6">
+                        <img src="assets/lets-encrypt.svg" alt="">
+                        <img src="assets/vtex-pci.svg" alt="">
+                    </div>
+                    <div class="flex gap-6">
+                        <img src="assets/Frame 14.svg" alt="">
+                        <img src="assets/VTEX_Log.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <footer class="
-        flex
-        lg:px-[360px] lg:pt-16 lg:pb-10 lg:flex-col lg:gap-16
-        ">
-        <div class="
-            grid
-            lg:grid-cols-4 lg:gap-[110px]
-            ">
-            <div class="
-                flex
-                lg:flex-col lg:gap-10
-                ">
-                <button>
-                    <img src="assets/Logo.svg" alt="Logo da Avanti">
-                </button>
-                <div class="flex items-center gap-10">
-                    <button>
-                        <img src="assets/Instagram.svg" alt="Icone do Instagram">
-                    </button>
-                    <button>
-                        <img src="assets/facebook.svg" alt="Icone do Instagram">
-                    </button>
-                    <button>
-                        <img src="assets/youtube.svg" alt="Icone do Instagram">
-                    </button>
-                    <button>
-                        <img src="assets/tiktok.svg" alt="Icone do Instagram">
-                    </button>
-                </div>
-            </div>
-            <div class="
-                flex flex-col text-sm
-                lg:gap-4
-                ">
-                <h4 class="text-black font-bold">Institucional</h4>
-                <div class="
-                    flex text-[#707070]
-                    lg:flex-col lg:gap-2
-                    ">
-                    <h5>Sobre Nós</h5>
-                    <h5>Nossas Lojas</h5>
-                    <h5>Privacidade e Segurança</h5>
-                    <h5>Termos e Condições</h5>
-                </div>
-            </div>
-            <div class="
-                flex flex-col text-sm
-                lg:gap-4
-                ">
-                <h4 class="text-black font-bold">Central de ajuda</h4>
-                <div class="
-                    flex text-[#707070]
-                    lg:flex-col lg:gap-2
-                    ">
-                    <h5>Fale Conosco</h5>
-                    <h5>Frete e Entrega</h5>
-                    <h5>Troca e Devoluçõoes</h5>
-                    <h5>Formas de Pagamento</h5>
-                    <h5>FAQ</h5>
-                </div>
-            </div>
-            <div class="
-                flex flex-col text-sm
-                lg:gap-4
-                ">
-                <h4 class="text-black font-bold">Atendimento</h4>
-                <div class="
-                    flex text-[#000]
-                    lg:flex-col lg:gap-2
-                    ">
-                    <div class="flex gap-1">
-                        <h5 class="font-semibold">Telefone:</h5>
-                        <span class="text-[#707070]">(00) 1234-5678</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <h5 class="font-semibold">E-mail:</h5>
-                        <span class="text-[#707070]">exemplo@exemplo.com.br</span>
-                    </div>
-                    <div class="
-                        flex 
-                        lg:flex-col lg:gap-2 text-[12px]">
-                        <h5 class="font-semibold">Horario de atendimento:</h5>
-                        <span class="text-[#707070]">Segunda a Sábado: 07h00 ás 23h00</span>
-                        <span class="text-[#707070]">Domingos e Feriados: 07h00 ás 21h00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="
-            flex items-center justify-center
-            lg:gap-8 
-            ">
-            <div>
-                <img src="assets/amex.svg" alt="logo Amex">
-            </div>
-            <div>
-                <img src="assets/União.svg" alt="Logo União">
-            </div>
-            <div>
-                <img src="assets/visa.svg" alt="Logo da Visa">
-            </div>
-            <div>
-                <img src="assets/hipercard.svg" alt="Logo da Hiper card">
-            </div>
-            <div>
-                <img src="assets/elo.svg" alt="Logo da Elo">
-            </div>
-            <div>
-                <img src="assets/b.svg" alt="Logo da">
-            </div>
-            <div>
-                <img src="assets/paypal.svg" alt="Logo do Paypal">
-            </div>
-            <div>
-                <img src="assets/pix.svg" alt="Logo do Pix">
-            </div>
-            <div>
-                <img src="assets/boleto.svg" alt="Boleto">
-            </div>
-        </div>
-        <div class="
-            flex
-            lg:flex-col lg:gap-10
-            ">
-            <span class="text-center text-[12px] text-[#303030]">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-                vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-                dolore te feugait nulla facilisi.
-            </span>
-            <div class="flex justify-center items-center gap-12">
-                <div class="flex gap-6">
-                    <img src="assets/lets-encrypt.svg" alt="">
-                    <img src="assets/vtex-pci.svg" alt="">
-                </div>
-                <div class="flex gap-6">
-                    <img src="assets/Frame 14.svg" alt="">
-                    <img src="assets/VTEX_Log.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <script src="scripts/Navegação.js"></script>
+    <script src="scripts/Busca.js"></script>
+    <script src="scripts/FooterBotao.js"></script>
+    
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -944,8 +2381,11 @@
                 clickable: true
             },
             breakpoints: {
-                640: {
+                0: {
                     slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
                 },
                 1024: {
                     slidesPerView: 5,

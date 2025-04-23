@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+@media screen and (min-width: 1024px) {
+    #MenuDepartamento1, #MenuDepartamento2, #MenuDepartamento3, #MenuDepartamento4, #MenuDepartamento5, #MenuDepartamento6, #MenuDepartamento7, #MenuDepartamento8, #MenuDepartamento9, #MenuDepartamento10{
+        display: none;
+    }
+
+    .submenu-consultas:hover .submenu-lateral {
+        display: block;
+    }
+    
+    .submenu-lateral {
+        display: none;
+    }
+    
+    #Categorias:hover #MenuCategorias{
+        display: flex;
+    }
+    
+    #Dep-1:hover #DepMenu1, #Dep-2:hover #DepMenu2, #Dep-3:hover #DepMenu3, #Dep-4:hover #DepMenu4, #Dep-5:hover #DepMenu5, #Dep-6:hover #DepMenu6, #Dep-7:hover #DepMenu7, #Dep-8:hover #DepMenu8{
+        display: flex;
+    }
+    
+    #MenuCategorias, #DepMenu1, #DepMenu2, #DepMenu3, #DepMenu4, #DepMenu5, #DepMenu6, #DepMenu7, #DepMenu8{
+        display: none;
+    }
+    
+    #Departamento1:hover #MenuDepartamento1{
+        display: flex;
+    }
+    
+    #Departamento2:hover #MenuDepartamento2{
+        display: flex;
+    }
+    
+    #Departamento3:hover #MenuDepartamento3{
+        display: flex;
+    }
+    
+    #Departamento4:hover #MenuDepartamento4{
+        display: flex;
+    }
+    
+    #Departamento5:hover #MenuDepartamento5{
+        display: flex;
+    }
+    
+    #Departamento6:hover #MenuDepartamento6{
+        display: flex;
+    }
+    
+    #Departamento7:hover #MenuDepartamento7{
+        display: flex;
+    }
+    
+    #Departamento8:hover #MenuDepartamento8{
+        display: flex;
+    }
+    
+    #Departamento9:hover #MenuDepartamento9{
+        display: flex;
+    }
+    
+    #Departamento10:hover #MenuDepartamento10{
+        display: flex;
+    }
+    
+    #Departamento1:hover #dep1, #Departamento2:hover #dep2, #Departamento3:hover #dep3,  #Departamento4:hover #dep4, #Departamento5:hover #dep5,  #Departamento6:hover #dep6,  #Departamento7:hover #dep7, #Departamento8:hover #dep8,  #Departamento9:hover #dep9, #Departamento10:hover #dep10{
+        color: #005CFF;
+    }
+    
+}
+
